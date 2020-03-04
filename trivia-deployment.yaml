@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: triviawebapp
+  labels:
+    app: triviawebapp
+spec:
+  selector:
+    matchLabels:
+      app: triviawebapp
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: triviawebapp
+    spec:
+      containers:
+        - name: triviawebapp
+          image: gcr.io/platzicursos/triviawebapp
+          imagePullPolicy: Always
+          ports:
+            - name: http-server
+              containerPort: 8080
+          env:
+            - name: GCLOUD_PROJECT
+              value: platzicursos
+            - name: GCLOUD_BUCKET
+              value: platizcursos-media

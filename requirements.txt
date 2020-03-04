@@ -1,0 +1,8 @@
+Flask
+google-cloud
+google-cloud-core
+google-cloud-datastore
+google-cloud-storage
+grpcio
+grpcio-tools
+gunicorn

@@ -1,0 +1,5 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [ 'build', '-t', 'gcr.io/platzicursos/triviawebapp', '.' ]
+images:
+  - 'gcr.io/platzicursos/triviawebapp'
